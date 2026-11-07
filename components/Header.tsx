@@ -14,7 +14,7 @@ export default function Header(){
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-1 ml-2">
-            {["How it works","Features","API","Dataset"].map(l=>(
+            {["Working"," "," ","Dataset"].map(l=>(
               <a key={l} href={`#${l.toLowerCase().replace(/ /g,'-')}`} className="px-3 py-1.5 rounded-full mono-label !text-muted hover:!text-paper hover:bg-surface-2 transition">{l}</a>
             ))}
           </nav>
@@ -24,7 +24,7 @@ export default function Header(){
             <span className="h-2 w-2 rounded-full bg-mint animate-pulse shadow-[0_0_8px_rgba(0,229,153,0.7)]" />
             KNN • cosine • k=3 — <span className="text-mint">ready</span>
           </span>
-          <a href="https://github.com" target="_blank" className="btn-ghost px-4 py-2 hidden sm:inline-flex">GitHub</a>
+          <a href="https://github.com/Sidd-ctrl/Music-Instrument-Recognizer" target="_blank" className="btn-ghost px-4 py-2 hidden sm:inline-flex">GitHub</a>
           <a href="#analyze" className="btn-lime px-4 py-2 text-sm">Analyze →</a>
         </div>
       </div>
