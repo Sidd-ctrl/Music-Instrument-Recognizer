@@ -1,0 +1,28 @@
+# Training config — edit then run `python ml/train.py`
+sample_rate: 22050
+max_duration: 30.0
+n_fft: 2048
+hop_length: 1024
+n_mfcc: 13
+n_mels: 40
+fmax: 11025
+
+model:
+  k: 3
+  metric: cosine
+  weights: distance
+  scaler: StandardScaler
+
+cv:
+  n_splits: 5
+  shuffle: true
+  random_state: 42
+
+paths:
+  dataset_dir: ./data/IRMAS
+  models_dir: ./models
+  # if dataset_dir missing, train.py synthesizes from centroids with IRMAS class balance
+  # to keep the pipeline runnable without downloading 11K files.
+
+frontend_parity:
+  note: "lib/dataset.ts centroids are the scaled means from this pipeline. Re-export after retraining by copying models/centroids.json → frontend."
